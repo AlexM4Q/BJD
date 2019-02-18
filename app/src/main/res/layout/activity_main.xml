@@ -6,11 +6,34 @@
     android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
-    <EditText
-        android:id="@+id/searchQuery"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/searchQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/searchAction"
+            android:layout_toLeftOf="@+id/searchAction"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/searchAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:text="🔍" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
